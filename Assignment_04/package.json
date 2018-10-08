@@ -1,0 +1,15 @@
+{
+  "name": "assignment4-trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exer2.js",
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
