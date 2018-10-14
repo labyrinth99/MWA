@@ -1,0 +1,11 @@
+{
+  "name": "assignment10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tscx": "tsc exercise_01.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}
