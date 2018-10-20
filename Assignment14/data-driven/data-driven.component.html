@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Data Driven Form</h1>
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="userData">
+
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" class="form-control" formControlName="name">
+            <div class="validation" *ngIf="!myForm.controls['userData'].controls['name'].valid">
+              Required
+            </div>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" [(ngModel)]="email" class="form-control" id="email" formControlName="email">
+            <div class="validation" *ngIf="!myForm.controls['userData'].controls['email'].valid">
+              Required
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label>Post</label>
+          <textarea [(ngModel)]="textarea" class="form-control" formControlName="textarea">
+          </textarea>
+          <div class="validation" *ngIf="!myForm.controls['textarea'].valid">
+            Minimum length 10
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+        <button type="button" class="btn btn-default" (click)="getDataAndShow()">Get Data</button>
+
+      </form>
+
+      <hr>
+    </div>
+  </div>
+</div>
